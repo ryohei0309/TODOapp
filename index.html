@@ -9,9 +9,13 @@
 </head>
 <body>
   <div id="app">
-    <p>
-    {{ message }}
-    </p>
+    <h2>今日やる事リスト</h2>
+    <form @submit.prevent>
+      <input type="text" v-model = "newItem">
+      <button @click ="addItem">
+        追加
+      </button>
+    </form>
   </div>
 
 

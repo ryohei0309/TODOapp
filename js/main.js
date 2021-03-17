@@ -6,10 +6,15 @@ var app = new Vue({
   },
   methods:{
     addItem:function(e){
-      var todo = {
-        item: this.newItem
-      };
-      this.todos.push(todo);
+      if(this.newItem == ""){
+      }else{
+        var todo = {
+          item: this.newItem,
+          isDone:false
+        };
+        this.todos.push(todo);
+        this.newItem = "";
+      }
     }
   }
 })
